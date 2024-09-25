@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="one">
+            <ul>Khushyan's Portfolio</ul>
+        </div>
+        <div class="two">
+            <ul>
+            <li class="home"> <a href="index.html">  Home </a> </li> 
+            <li class="project"> <a href="projects.html">  Projects </a> </li> 
+            <li class="github"> <a href="https://github.com/KhushyanKalla"> Git-Hub </a> </li> 
+            <li class="about">
+                <a href="#" class="about-dropdown-toggle">About</a>
+                <ul class="about-dropdown">
+                <li><a href="https://www.linkedin.com/in/khushyan-kalla-981009256/">LinkedIn</a></li>
+                <li><a href="#">E-Mail: khushyankalla1@gmail.com</a></li>
+                <li><a href="#">Phone No: +91 8733954760</a></li>
+
+
+                </ul>
+            </li> 
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <section class="first">
+            <div class="leftsection">Hi, My Name is <span class="namec">Khushyan </span>
+                <span>and i am</span>
+                <span id="element"></span>
+            </div>
+            <div class="rightsection">
+                <img src="bg22.png" alt="dsvbsdb">
+            </div>
+        </section>
+        <section class="second">
+            <hr>
+            <h2>Past Expeirence</h2>
+            <p class="tt1">What I Learned In Past</p>
+            
+            <div class="upperbox">
+                <div class="fvertical">
+                    <div class="text4">
+                        <h3>JAVA</h3>
+                        <p>(Semester_3)</p>
+                        <img class="jphoto" src="java.png" alt="">
+                    </div>
+                </div>
+                <div class="fvertical">
+                    <div class="text5">
+                        <h3>Python</h3>
+                        <p>(Semester_4)</p>
+                        <img class="pphoto" src="1python.png" alt="">
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="vertical"><img src="html.png" alt="" class="hphoto">
+                    <img src="css.png" alt="" class="cphoto">
+                    <img src="js.png" alt="" class="jsphoto">
+                    <div class="title-text">
+                        <h3> HTML,CSS,JavaScript</h3>
+                        <p>(Semester_1)</p>
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img class="mphoto" src="mongodb.png" alt="">
+                    <div class="title-text2">
+                        <h3>MongoDB</h3>
+                        <p>(Semester_4)</p>
+                    </div>
+                </div>
+                <div class="vv">
+                    <img class="cpp" src="c++.png" alt="">
+                    <div class="title-text3">
+                        <h3>C++</h3>
+                        <p>(Semester_5)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="about-me">
+            <h2>About Me</h2>
+            <p>I'm Khushyan kalla, a Computer Science Engineer skilled in C++, Java, Python, web development, MongoDB, DSA, and Android development. Passionate about tech and always improving my portfolio.
+
+
+
+                Contact:
+                
+
+                
+                Phone: +91 8733954760
+                Email: khushyankalla1@gmail.com
+                LinkedIn: KhushyanKalla
+                Let’s connect!</p>
+        </div>
+    </main>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+        strings: ['Android Devloper...', 'Pyhon Devloper...','Web Devloper'],
+        typeSpeed: 50,
+        });
+        document.body.addEventListener("pointermove", (e)=>{
+            const { currentTarget: el, clientX: x, clientY: y } = e;
+            const { top: t, left: l, width: w, height: h } = el.getBoundingClientRect();
+            el.style.setProperty('--posX',  x-t-l/6);  
+            el.style.setProperty('--posX',  y-w-h/6);
+        });
+        document.addEventListener("DOMContentLoaded", function() {
+            const aboutDropdownToggle = document.querySelector(".about-dropdown-toggle");
+            const aboutDropdown = document.querySelector(".about-dropdown");
+            aboutDropdownToggle.addEventListener("click", function() {
+            aboutDropdown.style.display = aboutDropdown.style.display === "block" ? "none" : "block";
+            });
+        });
+    </script>
+</body>
+</html>
